@@ -1,0 +1,12 @@
+<?php
+
+include(MODLE.'init.php');
+//验证登陆
+checkLogin();
+$pid = !empty($_GET['id'])?$_GET['id']:die('非法id');
+$res = delete('admin','id='.$pid);
+if(!empty($res)){
+		header("Location:".ROOT."index.php?a=index&c=admin&admin=1");
+	}else{
+		die('删除失败');
+	}

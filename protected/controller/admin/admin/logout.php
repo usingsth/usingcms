@@ -1,0 +1,9 @@
+<?php
+checkLogin();
+unset($_SESSION['username']);
+unset($_SESSION['level_id']);
+unset($_SESSION['mode']);
+unset($_SESSION['user_id']);
+unset($_SESSION['level']);
+header("Location:".ROOT."index.php?a=login&c=admin&admin=1");
+?>
