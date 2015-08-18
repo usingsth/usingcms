@@ -12,9 +12,6 @@ $admin = !empty($_GET['admin'])?'admin':'';
 define('C_NAME',$c);
 define('A_NAME',$a);
 
-//error_reporting(0);
-
-
 include MODEL.'init.php';
 
 if(!empty($admin)){
